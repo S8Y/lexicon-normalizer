@@ -1,13 +1,9 @@
 name: lexicon-normalizer
-version: 1.0.0
+version: 2.0.0
 description: >
-  Token / Lexicon Management Module — prevents cross-prompt lexical persistence
-  by treating each prompt as a stateless lexical environment. Replaces
-  user-specific vocabulary, identifiers, UUIDs, and rare tokens with canonical
-  _VEN_<N> placeholders before sending to LLM providers. Restores original
-  values in responses. No external models or memory used.
+  Token/lexicon management stub. All replacement/redaction logic has
+  been removed — it now lives in a dedicated redaction plugin.
+  This plugin is a no-op pass-through retained for config compatibility.
+entrypoint: __init__.py
 author: Hermes
-hooks:
-  - transform_llm_output
-  - pre_llm_call
-  - on_session_end
+license: MIT
